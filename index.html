@@ -54,7 +54,8 @@
 
             gameRound++;
             if(gameRound < 10){
-            gameQuestions.textContent = "Next Question: " + game[gameRound];}else{
+                gameQuestions.textContent = "Next Question: " + game[gameRound].q;
+            }else{
                 gameQuestions.textContent = "You have finished!";
             }
         }
