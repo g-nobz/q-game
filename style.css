@@ -1,0 +1,10 @@
+body{
+    background-color: blanchedalmond;
+}
+
+#gameQuestions{
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+    font-size: large;
+}
