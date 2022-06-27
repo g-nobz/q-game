@@ -9,7 +9,7 @@
 </head>
 <body>
     <div>
-        <p id="instructions">Press any key to start. Press t if you think the answer is true, or press f if you think the answer is false.</p>
+        <p id="instructions">Press any key to start. Press t if you think the answer is true, or press f if you think the answer is false. You can also press r to restart!</p>
         <p id="gameQuestions"></p>
         <p id="userScoreOutput"></p>
         <p id="userReview"></p>
@@ -33,6 +33,10 @@
             var userInput = event.key;
             var userAnswer;
 
+            if(userInput == "r"){
+                gameRound = -1;
+                userScore = 0;
+            }
             if(gameRound != -1 && gameRound < 10){
                 if(userInput == "t"){
                   userAnswer = true;
