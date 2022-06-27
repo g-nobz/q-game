@@ -2,9 +2,31 @@ body{
     background-color: blanchedalmond;
 }
 
+#instructions{
+    width: 50%;
+    margin-left: 25%;
+    text-align: center;
+    border: 1px;
+    border-color: aliceblue;
+}
+
 #gameQuestions{
     text-align: center;
     width: 50%;
     margin-left: 25%;
     font-size: large;
+    border-color: aliceblue;
+}
+
+#userReview{
+    text-align: center;
+    float: right;
+    margin-left: 50%;
+    width: 25%;
+}
+
+#userScoreOutput{
+    text-align: center;
+    float: left;
+    width: 25%;
 }
