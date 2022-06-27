@@ -9,9 +9,9 @@
 <body>
     <div>
         <p>Press any key to start. Press t if you think the answer is true, or press f if you think the answer is false.</p>
-        <p id="gameQuestions"></p>
-        <p id="userScore"></p>
-        <p id="userReview"></p>
+        <p id="gameQuestions"> Hi</p>
+        <p id="userScoreOutput"> Hey</p>
+        <p id="userReview">Hum</p>
     </div>
 
     <script type="text/javascript">
@@ -48,7 +48,8 @@
                     userReview.textContent = "You got it wrong.";
                 }
 
-                userScore.textContent = "Your score is " + userScore;
+                console.log(userScore);
+                userScoreOutput.textContent = "Your score is " + userScore;
 
             }
 
