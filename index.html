@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>Press any key to start. Press t if you think the answer is true, or press f if you think the answer is false.</p>
+        <p id="gameQuestions"></p>
+        <p id="userScore"></p>
+        <p id="userReview"></p>
+    </div>
+
+    <script type="text/javascript">
+        var game = [{q: "Is Mitski the best?", a: true},
+                    {q: "Is coding fun?", a: false},
+                    {q: "Is grass green?", a: true},
+                    {q: "Do pineapples belong on pizza?", a: false},
+                    {q: "Should everyone use the oxford comma?", a: true},
+                    {q: "Is dark chocolate the best chocolate?", a: true},
+                    {q: "Is the date 29/1/1894?", a: false},
+                    {q: "Did 7 8 9?", a: true},
+                    {q: "Is green the best color?", a: false},
+                    {q: "Is this question true?", a: false}];
+        var gameRound = -1;
+        var userScore = 0;
+
+        document.onkeyup = function(event){
+            var userInput = event.key;
+            var userAnswer;
+
+            if(gameRound != -1 && gameRound < 10){
+                if(userInput == "t"){
+                  userAnswer = true;
+                }
+
+                if(userInput == "f"){
+                 userAnswer = false;
+                }
+
+                if(userAnswer == game[gameRound]){
+                    userScore++;
+                    userReview.textContent = "You got it right!";
+                }else{
+                    userReview.textContent = "You got it wrong.";
+                }
+
+                userScore.textContent = "Your score is " + userScore;
+
+            }
+
+            gameRound++;
+            if(gameRound < 10){
+            gameQuestions.textContent = "Next Question: " + game[gameRound];}else{
+                gameQuestions.textContent = "You have finished!";
+            }
+        }
+        
+    </script>
+    
+</body>
+</html>
